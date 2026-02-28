@@ -108,6 +108,29 @@ services:
       - streaming
 
   # ---------------------------------------------------------------------------
+  # Python Consumer (Kafka -> Postgres/MinIO)
+  # ---------------------------------------------------------------------------
+  binance-consumer:
+    build:
+      context: ./consumer
+    container_name: crypto-binance-consumer
+    env_file: .env
+    environment:
+      RUNNING_IN_DOCKER: "true"
+    depends_on:
+      kafka:
+        condition: service_healthy
+      postgres:
+        condition: service_healthy
+      minio:
+        condition: service_healthy
+    networks:
+      - crypto-net
+    restart: on-failure:5
+    profiles:
+      - streaming
+
+  # ---------------------------------------------------------------------------
   # MinIO (S3-compatible object store)
   # ---------------------------------------------------------------------------
   minio:
