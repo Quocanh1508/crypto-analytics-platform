@@ -89,6 +89,25 @@ services:
       - crypto-net
 
   # ---------------------------------------------------------------------------
+  # Python Producer (Binance WebSocket -> Kafka)
+  # ---------------------------------------------------------------------------
+  binance-producer:
+    build:
+      context: ./producer
+    container_name: crypto-binance-producer
+    env_file: .env
+    environment:
+      RUNNING_IN_DOCKER: "true"
+    depends_on:
+      kafka:
+        condition: service_healthy
+    networks:
+      - crypto-net
+    restart: on-failure:5
+    profiles:
+      - streaming
+
+  # ---------------------------------------------------------------------------
   # MinIO (S3-compatible object store)
   # ---------------------------------------------------------------------------
   minio:

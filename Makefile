@@ -69,8 +69,8 @@ minio-ls: ## List all MinIO buckets
 # ---------------------------------------------------------------------------
 # Day profiles (start only the services you need)
 # ---------------------------------------------------------------------------
-up-streaming: ## Day: ingestion & streaming (Kafka, MinIO, Postgres)
-	$(COMPOSE) up -d zookeeper kafka minio postgres minio-init
+up-streaming: ## Day: ingestion & streaming (Kafka, MinIO, Postgres, Producer)
+	$(COMPOSE) --profile streaming up -d zookeeper kafka minio postgres minio-init binance-producer
 
 up-batch: ## Day: batch & modeling (MinIO, Postgres, Airflow)
 	$(COMPOSE) up -d postgres minio minio-init airflow-init airflow-webserver airflow-scheduler
