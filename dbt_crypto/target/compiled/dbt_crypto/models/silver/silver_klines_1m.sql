@@ -65,3 +65,7 @@ SELECT
 FROM deduped
 WHERE rn = 1
 
+
+    -- In incremental runs, only process data where the window is recent.
+    -- We look back 2 hours to ensure late-arriving WS data or recent REST updates are caught.
+    AND minute_ts >= (SELECT MAX(minute_ts) - INTERVAL '2 hours' FROM "crypto_analytics"."public_silver"."silver_klines_1m")

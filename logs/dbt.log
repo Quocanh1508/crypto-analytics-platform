@@ -1,0 +1,53 @@
+[0m21:04:37.592609 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D9B476D8A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D9B57C6260>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D9B57C7430>]}
+
+
+============================== 21:04:37.604648 | be73bc28-3ad1-420e-80f0-5c33240bd8e8 ==============================
+[0m21:04:37.604648 [info ] [MainThread]: Running with dbt=1.11.6
+[0m21:04:37.606454 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\QUOC ANH\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt init dbt_crypto', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m21:04:37.623817 [debug] [MainThread]: Starter project path: C:\Users\QUOC ANH\AppData\Local\Programs\Python\Python310\lib\site-packages\dbt\include\starter_project
+[0m21:04:37.682236 [info ] [MainThread]: 
+Your new dbt project "dbt_crypto" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m21:04:37.682236 [info ] [MainThread]: Setting up your profile.
+[0m21:08:50.252365 [error] [MainThread]: Encountered an error:
+
+[0m21:08:50.273897 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\QUOC ANH\AppData\Local\Programs\Python\Python310\lib\site-packages\dbt\cli\requires.py", line 182, in wrapper
+    result, success = func(*args, **kwargs)
+  File "C:\Users\QUOC ANH\AppData\Local\Programs\Python\Python310\lib\site-packages\dbt\cli\requires.py", line 128, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\QUOC ANH\AppData\Local\Programs\Python\Python310\lib\site-packages\dbt\cli\main.py", line 483, in init
+    results = task.run()
+  File "C:\Users\QUOC ANH\AppData\Local\Programs\Python\Python310\lib\site-packages\dbt\task\init.py", line 346, in run
+    self.setup_profile(profile_name)
+  File "C:\Users\QUOC ANH\AppData\Local\Programs\Python\Python310\lib\site-packages\dbt\task\init.py", line 262, in setup_profile
+    self.create_profile_from_target(adapter, profile_name=profile_name)
+  File "C:\Users\QUOC ANH\AppData\Local\Programs\Python\Python310\lib\site-packages\dbt\task\init.py", line 179, in create_profile_from_target
+    self.create_profile_from_profile_template(profile_template, profile_name)
+  File "C:\Users\QUOC ANH\AppData\Local\Programs\Python\Python310\lib\site-packages\dbt\task\init.py", line 163, in create_profile_from_profile_template
+    target = self.generate_target_from_input(prompts, initial_target)
+  File "C:\Users\QUOC ANH\AppData\Local\Programs\Python\Python310\lib\site-packages\dbt\task\init.py", line 129, in generate_target_from_input
+    target[key] = click.prompt(
+  File "C:\Users\QUOC ANH\AppData\Local\Programs\Python\Python310\lib\site-packages\click\termui.py", line 171, in prompt
+    value = prompt_func(prompt)
+  File "C:\Users\QUOC ANH\AppData\Local\Programs\Python\Python310\lib\site-packages\click\termui.py", line 154, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m21:08:50.276948 [debug] [MainThread]: Command `dbt init` failed at 21:08:50.275896 after 252.78 seconds
+[0m21:08:50.276948 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D9B476D8A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D9B5974580>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D9B5977B20>]}
+[0m21:08:50.277947 [debug] [MainThread]: Flushing usage events
+[0m21:08:51.932295 [debug] [MainThread]: An error was encountered while trying to flush usage events

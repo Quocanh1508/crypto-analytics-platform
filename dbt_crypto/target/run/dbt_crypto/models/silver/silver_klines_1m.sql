@@ -1,82 +1,37 @@
 
-      
+      -- back compat for old kwarg name
   
+  
+        
+            
+                
+                
+            
+                
+                
+            
+        
     
 
-  create  table "crypto_analytics"."public_silver"."silver_klines_1m"
-  
-  
-    as
-  
-  (
     
 
-WITH historical AS (
-    SELECT 
-        symbol,
-        minute_ts,
-        open,
-        high,
-        low,
-        close,
-        volume,
-        trade_count,
-        source_type,
-        ingested_at
-    FROM "crypto_analytics"."public_bronze"."bronze_historical_klines"
-),
+    merge into "crypto_analytics"."public_silver"."silver_klines_1m" as DBT_INTERNAL_DEST
+        using "silver_klines_1m__dbt_tmp160012228144" as DBT_INTERNAL_SOURCE
+        on (
+                    DBT_INTERNAL_SOURCE.symbol = DBT_INTERNAL_DEST.symbol
+                ) and (
+                    DBT_INTERNAL_SOURCE.minute_ts = DBT_INTERNAL_DEST.minute_ts
+                )
 
-realtime AS (
-    SELECT 
-        symbol,
-        minute_ts,
-        open,
-        high,
-        low,
-        close,
-        volume,
-        trade_count,
-        source_type,
-        ingested_at
-    FROM "crypto_analytics"."public_bronze"."bronze_realtime_klines"
-),
+    
+    when matched then update set
+        "symbol" = DBT_INTERNAL_SOURCE."symbol","minute_ts" = DBT_INTERNAL_SOURCE."minute_ts","open" = DBT_INTERNAL_SOURCE."open","high" = DBT_INTERNAL_SOURCE."high","low" = DBT_INTERNAL_SOURCE."low","close" = DBT_INTERNAL_SOURCE."close","volume" = DBT_INTERNAL_SOURCE."volume","trade_count" = DBT_INTERNAL_SOURCE."trade_count","source_type" = DBT_INTERNAL_SOURCE."source_type","ingested_at" = DBT_INTERNAL_SOURCE."ingested_at","dbt_updated_at" = DBT_INTERNAL_SOURCE."dbt_updated_at"
+    
 
--- Combine historical and real-time streams
-combined AS (
-    SELECT * FROM historical
-    UNION ALL
-    SELECT * FROM realtime
-),
-
--- Deduplicate overlapping minutes (preferring real-time data which has VWAP and is frequently updated, or just taking the latest ingestion)
-deduped AS (
-    SELECT 
-        *,
-        ROW_NUMBER() OVER (
-            PARTITION BY symbol, minute_ts 
-            ORDER BY 
-                CASE WHEN source_type = 'WS_STREAM' THEN 1 ELSE 2 END,
-                ingested_at DESC
-        ) as rn
-    FROM combined
-)
-
-SELECT 
-    symbol,
-    minute_ts,
-    open,
-    high,
-    low,
-    close,
-    volume,
-    trade_count,
-    source_type,
-    ingested_at,
-    CURRENT_TIMESTAMP AS dbt_updated_at
-FROM deduped
-WHERE rn = 1
+    when not matched then insert
+        ("symbol", "minute_ts", "open", "high", "low", "close", "volume", "trade_count", "source_type", "ingested_at", "dbt_updated_at")
+    values
+        ("symbol", "minute_ts", "open", "high", "low", "close", "volume", "trade_count", "source_type", "ingested_at", "dbt_updated_at")
 
 
-  );
-  
   
