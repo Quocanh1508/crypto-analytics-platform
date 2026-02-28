@@ -1,0 +1,1114 @@
+[0m21:12:38.692510 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002266D41D8D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002266E48AB00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002266E4889A0>]}
+
+
+============================== 21:12:38.696789 | 5ebd0e99-b890-4236-a6be-ae42a1db8484 ==============================
+[0m21:12:38.696789 [info ] [MainThread]: Running with dbt=1.11.6
+[0m21:12:38.696789 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\StudyZone\\Project\\Binance\\dbt_crypto', 'invocation_command': 'dbt run', 'indirect_selection': 'eager', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'C:\\StudyZone\\Project\\Binance\\dbt_crypto\\logs'}
+[0m21:12:38.965121 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '5ebd0e99-b890-4236-a6be-ae42a1db8484', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002266E48BD60>]}
+[0m21:12:39.077215 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '5ebd0e99-b890-4236-a6be-ae42a1db8484', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002266DC10880>]}
+[0m21:12:39.080897 [info ] [MainThread]: Registered adapter: postgres=1.8.2
+[0m21:12:39.430817 [debug] [MainThread]: checksum: ec27062d18352e9cfca161c166fcc73d2201661a23a3cf3c89196a27f32cfcb8, vars: {}, profile: , target: , version: 1.11.6
+[0m21:12:39.432761 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m21:12:39.433796 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '5ebd0e99-b890-4236-a6be-ae42a1db8484', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002266E5033A0>]}
+[0m21:12:42.369106 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '5ebd0e99-b890-4236-a6be-ae42a1db8484', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002266FF67FA0>]}
+[0m21:12:42.515916 [debug] [MainThread]: Wrote artifact WritableManifest to C:\StudyZone\Project\Binance\dbt_crypto\target\manifest.json
+[0m21:12:42.535793 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\StudyZone\Project\Binance\dbt_crypto\target\semantic_manifest.json
+[0m21:12:42.560640 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '5ebd0e99-b890-4236-a6be-ae42a1db8484', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002266FF3F040>]}
+[0m21:12:42.561355 [info ] [MainThread]: Found 4 models, 6 data tests, 2 sources, 462 macros
+[0m21:12:42.561355 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '5ebd0e99-b890-4236-a6be-ae42a1db8484', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002266FF63A30>]}
+[0m21:12:42.563081 [info ] [MainThread]: 
+[0m21:12:42.564226 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m21:12:42.564226 [info ] [MainThread]: 
+[0m21:12:42.565120 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m21:12:42.570437 [debug] [ThreadPool]: Acquiring new postgres connection 'list_crypto_analytics'
+[0m21:12:42.570437 [debug] [ThreadPool]: Acquiring new postgres connection 'list_crypto_analytics'
+[0m21:12:42.576618 [debug] [ThreadPool]: Acquiring new postgres connection 'list_crypto_analytics'
+[0m21:12:46.181175 [debug] [ThreadPool]: Using postgres connection "list_crypto_analytics"
+[0m21:12:46.181707 [debug] [ThreadPool]: Using postgres connection "list_crypto_analytics"
+[0m21:12:46.181707 [debug] [ThreadPool]: Using postgres connection "list_crypto_analytics"
+[0m21:12:46.182225 [debug] [ThreadPool]: On list_crypto_analytics: /* {"app": "dbt", "dbt_version": "1.11.6", "profile_name": "dbt_crypto", "target_name": "dev", "connection_name": "list_crypto_analytics"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m21:12:46.182225 [debug] [ThreadPool]: On list_crypto_analytics: /* {"app": "dbt", "dbt_version": "1.11.6", "profile_name": "dbt_crypto", "target_name": "dev", "connection_name": "list_crypto_analytics"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m21:12:46.182225 [debug] [ThreadPool]: On list_crypto_analytics: /* {"app": "dbt", "dbt_version": "1.11.6", "profile_name": "dbt_crypto", "target_name": "dev", "connection_name": "list_crypto_analytics"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m21:12:46.183973 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:12:46.183973 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:12:46.184580 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:12:46.217610 [debug] [ThreadPool]: SQL status: SELECT 7 in 0.033 seconds
+[0m21:12:46.218152 [debug] [ThreadPool]: SQL status: SELECT 7 in 0.034 seconds
+[0m21:12:46.218729 [debug] [ThreadPool]: SQL status: SELECT 7 in 0.034 seconds
+[0m21:12:46.219844 [debug] [ThreadPool]: On list_crypto_analytics: Close
+[0m21:12:46.220960 [debug] [ThreadPool]: On list_crypto_analytics: Close
+[0m21:12:46.222072 [debug] [ThreadPool]: On list_crypto_analytics: Close
+[0m21:12:46.222072 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_crypto_analytics, now create_crypto_analytics_public_silver)
+[0m21:12:46.222072 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_crypto_analytics, now create_crypto_analytics_public_gold)
+[0m21:12:46.222072 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_crypto_analytics, now create_crypto_analytics_public_bronze)
+[0m21:12:46.225806 [debug] [ThreadPool]: Creating schema "database: "crypto_analytics"
+schema: "public_silver"
+"
+[0m21:12:46.225806 [debug] [ThreadPool]: Creating schema "database: "crypto_analytics"
+schema: "public_gold"
+"
+[0m21:12:46.225806 [debug] [ThreadPool]: Creating schema "database: "crypto_analytics"
+schema: "public_bronze"
+"
+[0m21:12:46.232170 [debug] [ThreadPool]: Using postgres connection "create_crypto_analytics_public_silver"
+[0m21:12:46.232170 [debug] [ThreadPool]: Using postgres connection "create_crypto_analytics_public_gold"
+[0m21:12:46.232170 [debug] [ThreadPool]: Using postgres connection "create_crypto_analytics_public_bronze"
+[0m21:12:46.232170 [debug] [ThreadPool]: On create_crypto_analytics_public_silver: BEGIN
+[0m21:12:46.232170 [debug] [ThreadPool]: On create_crypto_analytics_public_gold: BEGIN
+[0m21:12:46.232170 [debug] [ThreadPool]: On create_crypto_analytics_public_bronze: BEGIN
+[0m21:12:46.232170 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m21:12:46.232170 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m21:12:46.232170 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m21:12:46.252538 [debug] [ThreadPool]: SQL status: BEGIN in 0.015 seconds
+[0m21:12:46.252538 [debug] [ThreadPool]: SQL status: BEGIN in 0.015 seconds
+[0m21:12:46.252538 [debug] [ThreadPool]: Using postgres connection "create_crypto_analytics_public_gold"
+[0m21:12:46.252538 [debug] [ThreadPool]: SQL status: BEGIN in 0.017 seconds
+[0m21:12:46.252538 [debug] [ThreadPool]: Using postgres connection "create_crypto_analytics_public_bronze"
+[0m21:12:46.252538 [debug] [ThreadPool]: On create_crypto_analytics_public_gold: /* {"app": "dbt", "dbt_version": "1.11.6", "profile_name": "dbt_crypto", "target_name": "dev", "connection_name": "create_crypto_analytics_public_gold"} */
+create schema if not exists "public_gold"
+[0m21:12:46.252538 [debug] [ThreadPool]: Using postgres connection "create_crypto_analytics_public_silver"
+[0m21:12:46.252538 [debug] [ThreadPool]: On create_crypto_analytics_public_bronze: /* {"app": "dbt", "dbt_version": "1.11.6", "profile_name": "dbt_crypto", "target_name": "dev", "connection_name": "create_crypto_analytics_public_bronze"} */
+create schema if not exists "public_bronze"
+[0m21:12:46.252538 [debug] [ThreadPool]: On create_crypto_analytics_public_silver: /* {"app": "dbt", "dbt_version": "1.11.6", "profile_name": "dbt_crypto", "target_name": "dev", "connection_name": "create_crypto_analytics_public_silver"} */
+create schema if not exists "public_silver"
+[0m21:12:46.252538 [debug] [ThreadPool]: SQL status: CREATE SCHEMA in 0.001 seconds
+[0m21:12:46.252538 [debug] [ThreadPool]: SQL status: CREATE SCHEMA in 0.001 seconds
+[0m21:12:46.252538 [debug] [ThreadPool]: SQL status: CREATE SCHEMA in 0.001 seconds
+[0m21:12:46.260178 [debug] [ThreadPool]: On create_crypto_analytics_public_gold: COMMIT
+[0m21:12:46.260178 [debug] [ThreadPool]: On create_crypto_analytics_public_bronze: COMMIT
+[0m21:12:46.262251 [debug] [ThreadPool]: On create_crypto_analytics_public_silver: COMMIT
+[0m21:12:46.263106 [debug] [ThreadPool]: Using postgres connection "create_crypto_analytics_public_gold"
+[0m21:12:46.263648 [debug] [ThreadPool]: Using postgres connection "create_crypto_analytics_public_bronze"
+[0m21:12:46.263648 [debug] [ThreadPool]: Using postgres connection "create_crypto_analytics_public_silver"
+[0m21:12:46.263648 [debug] [ThreadPool]: On create_crypto_analytics_public_gold: COMMIT
+[0m21:12:46.263648 [debug] [ThreadPool]: On create_crypto_analytics_public_bronze: COMMIT
+[0m21:12:46.263648 [debug] [ThreadPool]: On create_crypto_analytics_public_silver: COMMIT
+[0m21:12:46.263648 [debug] [ThreadPool]: SQL status: COMMIT in 0.001 seconds
+[0m21:12:46.263648 [debug] [ThreadPool]: On create_crypto_analytics_public_gold: Close
+[0m21:12:46.263648 [debug] [ThreadPool]: SQL status: COMMIT in 0.002 seconds
+[0m21:12:46.263648 [debug] [ThreadPool]: SQL status: COMMIT in 0.002 seconds
+[0m21:12:46.263648 [debug] [ThreadPool]: On create_crypto_analytics_public_bronze: Close
+[0m21:12:46.263648 [debug] [ThreadPool]: On create_crypto_analytics_public_silver: Close
+[0m21:12:46.263648 [debug] [ThreadPool]: Acquiring new postgres connection 'list_crypto_analytics_public_silver'
+[0m21:12:46.263648 [debug] [ThreadPool]: Acquiring new postgres connection 'list_crypto_analytics_public_gold'
+[0m21:12:46.278260 [debug] [ThreadPool]: Using postgres connection "list_crypto_analytics_public_silver"
+[0m21:12:46.278260 [debug] [ThreadPool]: Acquiring new postgres connection 'list_crypto_analytics_public_bronze'
+[0m21:12:46.280355 [debug] [ThreadPool]: Using postgres connection "list_crypto_analytics_public_gold"
+[0m21:12:46.280355 [debug] [ThreadPool]: On list_crypto_analytics_public_silver: BEGIN
+[0m21:12:46.283127 [debug] [ThreadPool]: Using postgres connection "list_crypto_analytics_public_bronze"
+[0m21:12:46.284146 [debug] [ThreadPool]: On list_crypto_analytics_public_gold: BEGIN
+[0m21:12:46.284146 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:12:46.285177 [debug] [ThreadPool]: On list_crypto_analytics_public_bronze: BEGIN
+[0m21:12:46.285177 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:12:46.286149 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:12:46.297632 [debug] [ThreadPool]: SQL status: BEGIN in 0.012 seconds
+[0m21:12:46.297632 [debug] [ThreadPool]: Using postgres connection "list_crypto_analytics_public_bronze"
+[0m21:12:46.297632 [debug] [ThreadPool]: On list_crypto_analytics_public_bronze: /* {"app": "dbt", "dbt_version": "1.11.6", "profile_name": "dbt_crypto", "target_name": "dev", "connection_name": "list_crypto_analytics_public_bronze"} */
+select
+      'crypto_analytics' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_bronze'
+    union all
+    select
+      'crypto_analytics' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_bronze'
+    union all
+    select
+      'crypto_analytics' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_bronze'
+  
+[0m21:12:46.313886 [debug] [ThreadPool]: SQL status: BEGIN in 0.036 seconds
+[0m21:12:46.313886 [debug] [ThreadPool]: SQL status: BEGIN in 0.035 seconds
+[0m21:12:46.313886 [debug] [ThreadPool]: Using postgres connection "list_crypto_analytics_public_silver"
+[0m21:12:46.313886 [debug] [ThreadPool]: Using postgres connection "list_crypto_analytics_public_gold"
+[0m21:12:46.313886 [debug] [ThreadPool]: On list_crypto_analytics_public_silver: /* {"app": "dbt", "dbt_version": "1.11.6", "profile_name": "dbt_crypto", "target_name": "dev", "connection_name": "list_crypto_analytics_public_silver"} */
+select
+      'crypto_analytics' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_silver'
+    union all
+    select
+      'crypto_analytics' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_silver'
+    union all
+    select
+      'crypto_analytics' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_silver'
+  
+[0m21:12:46.313886 [debug] [ThreadPool]: On list_crypto_analytics_public_gold: /* {"app": "dbt", "dbt_version": "1.11.6", "profile_name": "dbt_crypto", "target_name": "dev", "connection_name": "list_crypto_analytics_public_gold"} */
+select
+      'crypto_analytics' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_gold'
+    union all
+    select
+      'crypto_analytics' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_gold'
+    union all
+    select
+      'crypto_analytics' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_gold'
+  
+[0m21:12:46.313886 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.025 seconds
+[0m21:12:46.325675 [debug] [ThreadPool]: On list_crypto_analytics_public_bronze: ROLLBACK
+[0m21:12:46.325675 [debug] [ThreadPool]: On list_crypto_analytics_public_bronze: Close
+[0m21:12:46.325675 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.004 seconds
+[0m21:12:46.325675 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.005 seconds
+[0m21:12:46.328845 [debug] [ThreadPool]: On list_crypto_analytics_public_gold: ROLLBACK
+[0m21:12:46.329453 [debug] [ThreadPool]: On list_crypto_analytics_public_silver: ROLLBACK
+[0m21:12:46.331790 [debug] [ThreadPool]: On list_crypto_analytics_public_gold: Close
+[0m21:12:46.331790 [debug] [ThreadPool]: On list_crypto_analytics_public_silver: Close
+[0m21:12:46.335631 [debug] [MainThread]: Using postgres connection "master"
+[0m21:12:46.335631 [debug] [MainThread]: On master: BEGIN
+[0m21:12:46.338608 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:12:46.353786 [debug] [MainThread]: SQL status: BEGIN in 0.020 seconds
+[0m21:12:46.353786 [debug] [MainThread]: Using postgres connection "master"
+[0m21:12:46.360271 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.11.6", "profile_name": "dbt_crypto", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m21:12:46.375748 [debug] [MainThread]: SQL status: SELECT 0 in 0.015 seconds
+[0m21:12:46.375748 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '5ebd0e99-b890-4236-a6be-ae42a1db8484', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002266FC509D0>]}
+[0m21:12:46.375748 [debug] [MainThread]: On master: ROLLBACK
+[0m21:12:46.378867 [debug] [MainThread]: Using postgres connection "master"
+[0m21:12:46.378867 [debug] [MainThread]: On master: BEGIN
+[0m21:12:46.380432 [debug] [MainThread]: SQL status: BEGIN in 0.001 seconds
+[0m21:12:46.380432 [debug] [MainThread]: On master: COMMIT
+[0m21:12:46.380432 [debug] [MainThread]: Using postgres connection "master"
+[0m21:12:46.380432 [debug] [MainThread]: On master: COMMIT
+[0m21:12:46.382492 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m21:12:46.382492 [debug] [MainThread]: On master: Close
+[0m21:12:46.389392 [debug] [Thread-1 (]: Began running node model.dbt_crypto.bronze_historical_klines
+[0m21:12:46.389926 [debug] [Thread-2 (]: Began running node model.dbt_crypto.bronze_realtime_klines
+[0m21:12:46.391041 [info ] [Thread-1 (]: 1 of 4 START sql view model public_bronze.bronze_historical_klines ............. [RUN]
+[0m21:12:46.391579 [info ] [Thread-2 (]: 2 of 4 START sql view model public_bronze.bronze_realtime_klines ............... [RUN]
+[0m21:12:46.392634 [debug] [Thread-1 (]: Acquiring new postgres connection 'model.dbt_crypto.bronze_historical_klines'
+[0m21:12:46.393716 [debug] [Thread-2 (]: Acquiring new postgres connection 'model.dbt_crypto.bronze_realtime_klines'
+[0m21:12:46.393716 [debug] [Thread-1 (]: Began compiling node model.dbt_crypto.bronze_historical_klines
+[0m21:12:46.394811 [debug] [Thread-2 (]: Began compiling node model.dbt_crypto.bronze_realtime_klines
+[0m21:12:46.402356 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_crypto.bronze_historical_klines"
+[0m21:12:46.406961 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_crypto.bronze_realtime_klines"
+[0m21:12:46.409930 [debug] [Thread-2 (]: Began executing node model.dbt_crypto.bronze_realtime_klines
+[0m21:12:46.410449 [debug] [Thread-1 (]: Began executing node model.dbt_crypto.bronze_historical_klines
+[0m21:12:46.441157 [debug] [Thread-2 (]: Writing runtime sql for node "model.dbt_crypto.bronze_realtime_klines"
+[0m21:12:46.445131 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_crypto.bronze_historical_klines"
+[0m21:12:46.448134 [debug] [Thread-1 (]: Using postgres connection "model.dbt_crypto.bronze_historical_klines"
+[0m21:12:46.448134 [debug] [Thread-2 (]: Using postgres connection "model.dbt_crypto.bronze_realtime_klines"
+[0m21:12:46.449136 [debug] [Thread-1 (]: On model.dbt_crypto.bronze_historical_klines: BEGIN
+[0m21:12:46.449136 [debug] [Thread-2 (]: On model.dbt_crypto.bronze_realtime_klines: BEGIN
+[0m21:12:46.449136 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m21:12:46.450309 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m21:12:46.462431 [debug] [Thread-2 (]: SQL status: BEGIN in 0.012 seconds
+[0m21:12:46.463016 [debug] [Thread-2 (]: Using postgres connection "model.dbt_crypto.bronze_realtime_klines"
+[0m21:12:46.463593 [debug] [Thread-1 (]: SQL status: BEGIN in 0.014 seconds
+[0m21:12:46.464141 [debug] [Thread-2 (]: On model.dbt_crypto.bronze_realtime_klines: /* {"app": "dbt", "dbt_version": "1.11.6", "profile_name": "dbt_crypto", "target_name": "dev", "node_id": "model.dbt_crypto.bronze_realtime_klines"} */
+
+  create view "crypto_analytics"."public_bronze"."bronze_realtime_klines__dbt_tmp"
+    
+    
+  as (
+    
+
+WITH raw AS (
+    SELECT
+        id,
+        symbol,
+        minute_ts,
+        open,
+        high,
+        low,
+        close,
+        volume,
+        trade_count,
+        vwap,
+        updated_at AS ingested_at,
+        'WS_STREAM' AS source_type
+    FROM "crypto_analytics"."public"."fact_realtime_trades_1m"
+)
+
+SELECT * FROM raw
+  );
+[0m21:12:46.464723 [debug] [Thread-1 (]: Using postgres connection "model.dbt_crypto.bronze_historical_klines"
+[0m21:12:46.465296 [debug] [Thread-1 (]: On model.dbt_crypto.bronze_historical_klines: /* {"app": "dbt", "dbt_version": "1.11.6", "profile_name": "dbt_crypto", "target_name": "dev", "node_id": "model.dbt_crypto.bronze_historical_klines"} */
+
+  create view "crypto_analytics"."public_bronze"."bronze_historical_klines__dbt_tmp"
+    
+    
+  as (
+    
+
+WITH raw AS (
+    SELECT
+        id,
+        symbol,
+        open_time AS minute_ts,
+        open,
+        high,
+        low,
+        close,
+        volume,
+        trade_count,
+        close_time,
+        quote_volume,
+        taker_buy_base_volume,
+        taker_buy_quote_volume,
+        ingested_at,
+        'REST_BATCH' AS source_type
+    FROM "crypto_analytics"."public"."raw_klines"
+)
+
+SELECT * FROM raw
+  );
+[0m21:12:46.483591 [debug] [Thread-2 (]: SQL status: CREATE VIEW in 0.022 seconds
+[0m21:12:46.483591 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.022 seconds
+[0m21:12:46.492750 [debug] [Thread-2 (]: Using postgres connection "model.dbt_crypto.bronze_realtime_klines"
+[0m21:12:46.496152 [debug] [Thread-1 (]: Using postgres connection "model.dbt_crypto.bronze_historical_klines"
+[0m21:12:46.496686 [debug] [Thread-2 (]: On model.dbt_crypto.bronze_realtime_klines: /* {"app": "dbt", "dbt_version": "1.11.6", "profile_name": "dbt_crypto", "target_name": "dev", "node_id": "model.dbt_crypto.bronze_realtime_klines"} */
+alter table "crypto_analytics"."public_bronze"."bronze_realtime_klines__dbt_tmp" rename to "bronze_realtime_klines"
+[0m21:12:46.497317 [debug] [Thread-1 (]: On model.dbt_crypto.bronze_historical_klines: /* {"app": "dbt", "dbt_version": "1.11.6", "profile_name": "dbt_crypto", "target_name": "dev", "node_id": "model.dbt_crypto.bronze_historical_klines"} */
+alter table "crypto_analytics"."public_bronze"."bronze_historical_klines__dbt_tmp" rename to "bronze_historical_klines"
+[0m21:12:46.500344 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.002 seconds
+[0m21:12:46.500344 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.003 seconds
+[0m21:12:46.513827 [debug] [Thread-1 (]: On model.dbt_crypto.bronze_historical_klines: COMMIT
+[0m21:12:46.513827 [debug] [Thread-2 (]: On model.dbt_crypto.bronze_realtime_klines: COMMIT
+[0m21:12:46.513827 [debug] [Thread-1 (]: Using postgres connection "model.dbt_crypto.bronze_historical_klines"
+[0m21:12:46.513827 [debug] [Thread-2 (]: Using postgres connection "model.dbt_crypto.bronze_realtime_klines"
+[0m21:12:46.513827 [debug] [Thread-1 (]: On model.dbt_crypto.bronze_historical_klines: COMMIT
+[0m21:12:46.513827 [debug] [Thread-2 (]: On model.dbt_crypto.bronze_realtime_klines: COMMIT
+[0m21:12:46.513827 [debug] [Thread-1 (]: SQL status: COMMIT in 0.003 seconds
+[0m21:12:46.513827 [debug] [Thread-2 (]: SQL status: COMMIT in 0.004 seconds
+[0m21:12:46.530547 [debug] [Thread-1 (]: Applying DROP to: "crypto_analytics"."public_bronze"."bronze_historical_klines__dbt_backup"
+[0m21:12:46.533739 [debug] [Thread-2 (]: Applying DROP to: "crypto_analytics"."public_bronze"."bronze_realtime_klines__dbt_backup"
+[0m21:12:46.538433 [debug] [Thread-1 (]: Using postgres connection "model.dbt_crypto.bronze_historical_klines"
+[0m21:12:46.539433 [debug] [Thread-2 (]: Using postgres connection "model.dbt_crypto.bronze_realtime_klines"
+[0m21:12:46.540104 [debug] [Thread-1 (]: On model.dbt_crypto.bronze_historical_klines: /* {"app": "dbt", "dbt_version": "1.11.6", "profile_name": "dbt_crypto", "target_name": "dev", "node_id": "model.dbt_crypto.bronze_historical_klines"} */
+drop view if exists "crypto_analytics"."public_bronze"."bronze_historical_klines__dbt_backup" cascade
+[0m21:12:46.540104 [debug] [Thread-2 (]: On model.dbt_crypto.bronze_realtime_klines: /* {"app": "dbt", "dbt_version": "1.11.6", "profile_name": "dbt_crypto", "target_name": "dev", "node_id": "model.dbt_crypto.bronze_realtime_klines"} */
+drop view if exists "crypto_analytics"."public_bronze"."bronze_realtime_klines__dbt_backup" cascade
+[0m21:12:46.543772 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.003 seconds
+[0m21:12:46.544509 [debug] [Thread-2 (]: SQL status: DROP VIEW in 0.003 seconds
+[0m21:12:46.547362 [debug] [Thread-1 (]: On model.dbt_crypto.bronze_historical_klines: Close
+[0m21:12:46.549304 [debug] [Thread-2 (]: On model.dbt_crypto.bronze_realtime_klines: Close
+[0m21:12:46.554073 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '5ebd0e99-b890-4236-a6be-ae42a1db8484', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002266FFB3760>]}
+[0m21:12:46.554418 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '5ebd0e99-b890-4236-a6be-ae42a1db8484', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000226701C6B90>]}
+[0m21:12:46.555491 [info ] [Thread-1 (]: 1 of 4 OK created sql view model public_bronze.bronze_historical_klines ........ [[32mCREATE VIEW[0m in 0.16s]
+[0m21:12:46.556614 [info ] [Thread-2 (]: 2 of 4 OK created sql view model public_bronze.bronze_realtime_klines .......... [[32mCREATE VIEW[0m in 0.16s]
+[0m21:12:46.557171 [debug] [Thread-1 (]: Finished running node model.dbt_crypto.bronze_historical_klines
+[0m21:12:46.558295 [debug] [Thread-2 (]: Finished running node model.dbt_crypto.bronze_realtime_klines
+[0m21:12:46.559229 [debug] [Thread-4 (]: Began running node model.dbt_crypto.silver_klines_1m
+[0m21:12:46.559229 [info ] [Thread-4 (]: 3 of 4 START sql incremental model public_silver.silver_klines_1m .............. [RUN]
+[0m21:12:46.560267 [debug] [Thread-4 (]: Acquiring new postgres connection 'model.dbt_crypto.silver_klines_1m'
+[0m21:12:46.560267 [debug] [Thread-4 (]: Began compiling node model.dbt_crypto.silver_klines_1m
+[0m21:12:46.565595 [debug] [Thread-4 (]: Writing injected SQL for node "model.dbt_crypto.silver_klines_1m"
+[0m21:12:46.565595 [debug] [Thread-4 (]: Began executing node model.dbt_crypto.silver_klines_1m
+[0m21:12:46.601808 [debug] [Thread-4 (]: Writing runtime sql for node "model.dbt_crypto.silver_klines_1m"
+[0m21:12:46.603579 [debug] [Thread-4 (]: Using postgres connection "model.dbt_crypto.silver_klines_1m"
+[0m21:12:46.604597 [debug] [Thread-4 (]: On model.dbt_crypto.silver_klines_1m: BEGIN
+[0m21:12:46.604597 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m21:12:46.617067 [debug] [Thread-4 (]: SQL status: BEGIN in 0.012 seconds
+[0m21:12:46.617067 [debug] [Thread-4 (]: Using postgres connection "model.dbt_crypto.silver_klines_1m"
+[0m21:12:46.618083 [debug] [Thread-4 (]: On model.dbt_crypto.silver_klines_1m: /* {"app": "dbt", "dbt_version": "1.11.6", "profile_name": "dbt_crypto", "target_name": "dev", "node_id": "model.dbt_crypto.silver_klines_1m"} */
+
+      
+  
+    
+
+  create  table "crypto_analytics"."public_silver"."silver_klines_1m"
+  
+  
+    as
+  
+  (
+    
+
+WITH historical AS (
+    SELECT 
+        symbol,
+        minute_ts,
+        open,
+        high,
+        low,
+        close,
+        volume,
+        trade_count,
+        source_type,
+        ingested_at
+    FROM "crypto_analytics"."public_bronze"."bronze_historical_klines"
+),
+
+realtime AS (
+    SELECT 
+        symbol,
+        minute_ts,
+        open,
+        high,
+        low,
+        close,
+        volume,
+        trade_count,
+        source_type,
+        ingested_at
+    FROM "crypto_analytics"."public_bronze"."bronze_realtime_klines"
+),
+
+-- Combine historical and real-time streams
+combined AS (
+    SELECT * FROM historical
+    UNION ALL
+    SELECT * FROM realtime
+),
+
+-- Deduplicate overlapping minutes (preferring real-time data which has VWAP and is frequently updated, or just taking the latest ingestion)
+deduped AS (
+    SELECT 
+        *,
+        ROW_NUMBER() OVER (
+            PARTITION BY symbol, minute_ts 
+            ORDER BY 
+                CASE WHEN source_type = 'WS_STREAM' THEN 1 ELSE 2 END,
+                ingested_at DESC
+        ) as rn
+    FROM combined
+)
+
+SELECT 
+    symbol,
+    minute_ts,
+    open,
+    high,
+    low,
+    close,
+    volume,
+    trade_count,
+    source_type,
+    ingested_at,
+    CURRENT_TIMESTAMP AS dbt_updated_at
+FROM deduped
+WHERE rn = 1
+
+
+  );
+  
+  
+[0m21:12:46.775475 [debug] [Thread-4 (]: SQL status: SELECT 9249 in 0.157 seconds
+[0m21:12:46.779026 [debug] [Thread-4 (]: On model.dbt_crypto.silver_klines_1m: COMMIT
+[0m21:12:46.780599 [debug] [Thread-4 (]: Using postgres connection "model.dbt_crypto.silver_klines_1m"
+[0m21:12:46.780599 [debug] [Thread-4 (]: On model.dbt_crypto.silver_klines_1m: COMMIT
+[0m21:12:46.792508 [debug] [Thread-4 (]: SQL status: COMMIT in 0.011 seconds
+[0m21:12:46.792508 [debug] [Thread-4 (]: On model.dbt_crypto.silver_klines_1m: Close
+[0m21:12:46.792508 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '5ebd0e99-b890-4236-a6be-ae42a1db8484', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002267033BA00>]}
+[0m21:12:46.792508 [info ] [Thread-4 (]: 3 of 4 OK created sql incremental model public_silver.silver_klines_1m ......... [[32mSELECT 9249[0m in 0.23s]
+[0m21:12:46.792508 [debug] [Thread-4 (]: Finished running node model.dbt_crypto.silver_klines_1m
+[0m21:12:46.792508 [debug] [Thread-1 (]: Began running node model.dbt_crypto.gold_klines_5m
+[0m21:12:46.792508 [info ] [Thread-1 (]: 4 of 4 START sql table model public_gold.gold_klines_5m ........................ [RUN]
+[0m21:12:46.792508 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_crypto.bronze_historical_klines, now model.dbt_crypto.gold_klines_5m)
+[0m21:12:46.799845 [debug] [Thread-1 (]: Began compiling node model.dbt_crypto.gold_klines_5m
+[0m21:12:46.804349 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_crypto.gold_klines_5m"
+[0m21:12:46.806347 [debug] [Thread-1 (]: Began executing node model.dbt_crypto.gold_klines_5m
+[0m21:12:46.819461 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_crypto.gold_klines_5m"
+[0m21:12:46.821083 [debug] [Thread-1 (]: Using postgres connection "model.dbt_crypto.gold_klines_5m"
+[0m21:12:46.821608 [debug] [Thread-1 (]: On model.dbt_crypto.gold_klines_5m: BEGIN
+[0m21:12:46.822131 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:12:46.845504 [debug] [Thread-1 (]: SQL status: BEGIN in 0.023 seconds
+[0m21:12:46.845504 [debug] [Thread-1 (]: Using postgres connection "model.dbt_crypto.gold_klines_5m"
+[0m21:12:46.846519 [debug] [Thread-1 (]: On model.dbt_crypto.gold_klines_5m: /* {"app": "dbt", "dbt_version": "1.11.6", "profile_name": "dbt_crypto", "target_name": "dev", "node_id": "model.dbt_crypto.gold_klines_5m"} */
+
+  
+    
+
+  create  table "crypto_analytics"."public_gold"."gold_klines_5m__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+WITH silver_1m AS (
+    SELECT * FROM "crypto_analytics"."public_silver"."silver_klines_1m"
+),
+
+-- Generate 5-minute tumbling windows
+time_buckets AS (
+    SELECT
+        symbol,
+        date_trunc('hour', minute_ts) + 
+        INTERVAL '5 min' * FLOOR(extract('minute' from minute_ts) / 5) AS bucket_5m,
+        minute_ts,
+        open, high, low, close, volume, trade_count
+    FROM silver_1m
+),
+
+aggregated AS (
+    SELECT
+        symbol,
+        bucket_5m,
+        MIN(minute_ts) as first_minute,
+        MAX(minute_ts) as last_minute,
+        MAX(high) as high,
+        MIN(low) as low,
+        SUM(volume) as volume,
+        SUM(trade_count) as trade_count
+    FROM time_buckets
+    GROUP BY symbol, bucket_5m
+),
+
+-- To get correct Open and Close, we join back to get the rows corresponding to first/last minute
+final_calc AS (
+    SELECT 
+        a.symbol,
+        a.bucket_5m,
+        o.open AS open,
+        a.high,
+        a.low,
+        c.close AS close,
+        a.volume,
+        a.trade_count
+    FROM aggregated a
+    JOIN time_buckets o ON a.symbol = o.symbol AND a.first_minute = o.minute_ts
+    JOIN time_buckets c ON a.symbol = c.symbol AND a.last_minute = c.minute_ts
+)
+
+SELECT * FROM final_calc
+ORDER BY bucket_5m DESC, symbol
+  );
+  
+[0m21:12:46.882449 [debug] [Thread-1 (]: SQL status: SELECT 1854 in 0.036 seconds
+[0m21:12:46.882449 [debug] [Thread-1 (]: Using postgres connection "model.dbt_crypto.gold_klines_5m"
+[0m21:12:46.882449 [debug] [Thread-1 (]: On model.dbt_crypto.gold_klines_5m: /* {"app": "dbt", "dbt_version": "1.11.6", "profile_name": "dbt_crypto", "target_name": "dev", "node_id": "model.dbt_crypto.gold_klines_5m"} */
+alter table "crypto_analytics"."public_gold"."gold_klines_5m__dbt_tmp" rename to "gold_klines_5m"
+[0m21:12:46.882449 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m21:12:46.882449 [debug] [Thread-1 (]: On model.dbt_crypto.gold_klines_5m: COMMIT
+[0m21:12:46.882449 [debug] [Thread-1 (]: Using postgres connection "model.dbt_crypto.gold_klines_5m"
+[0m21:12:46.882449 [debug] [Thread-1 (]: On model.dbt_crypto.gold_klines_5m: COMMIT
+[0m21:12:46.893020 [debug] [Thread-1 (]: SQL status: COMMIT in 0.004 seconds
+[0m21:12:46.897323 [debug] [Thread-1 (]: Applying DROP to: "crypto_analytics"."public_gold"."gold_klines_5m__dbt_backup"
+[0m21:12:46.899519 [debug] [Thread-1 (]: Using postgres connection "model.dbt_crypto.gold_klines_5m"
+[0m21:12:46.900061 [debug] [Thread-1 (]: On model.dbt_crypto.gold_klines_5m: /* {"app": "dbt", "dbt_version": "1.11.6", "profile_name": "dbt_crypto", "target_name": "dev", "node_id": "model.dbt_crypto.gold_klines_5m"} */
+drop table if exists "crypto_analytics"."public_gold"."gold_klines_5m__dbt_backup" cascade
+[0m21:12:46.901128 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.001 seconds
+[0m21:12:46.902696 [debug] [Thread-1 (]: On model.dbt_crypto.gold_klines_5m: Close
+[0m21:12:46.903220 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '5ebd0e99-b890-4236-a6be-ae42a1db8484', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000226701C6B90>]}
+[0m21:12:46.904282 [info ] [Thread-1 (]: 4 of 4 OK created sql table model public_gold.gold_klines_5m ................... [[32mSELECT 1854[0m in 0.11s]
+[0m21:12:46.904835 [debug] [Thread-1 (]: Finished running node model.dbt_crypto.gold_klines_5m
+[0m21:12:46.906467 [debug] [MainThread]: Using postgres connection "master"
+[0m21:12:46.906467 [debug] [MainThread]: On master: BEGIN
+[0m21:12:46.907077 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m21:12:46.932191 [debug] [MainThread]: SQL status: BEGIN in 0.025 seconds
+[0m21:12:46.933198 [debug] [MainThread]: On master: COMMIT
+[0m21:12:46.933198 [debug] [MainThread]: Using postgres connection "master"
+[0m21:12:46.933198 [debug] [MainThread]: On master: COMMIT
+[0m21:12:46.934647 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m21:12:46.935845 [debug] [MainThread]: On master: Close
+[0m21:12:46.935845 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:12:46.936972 [debug] [MainThread]: Connection 'create_crypto_analytics_public_gold' was properly closed.
+[0m21:12:46.937724 [debug] [MainThread]: Connection 'create_crypto_analytics_public_bronze' was properly closed.
+[0m21:12:46.938138 [debug] [MainThread]: Connection 'create_crypto_analytics_public_silver' was properly closed.
+[0m21:12:46.938138 [debug] [MainThread]: Connection 'list_crypto_analytics_public_silver' was properly closed.
+[0m21:12:46.938138 [debug] [MainThread]: Connection 'list_crypto_analytics_public_gold' was properly closed.
+[0m21:12:46.938138 [debug] [MainThread]: Connection 'list_crypto_analytics_public_bronze' was properly closed.
+[0m21:12:46.938138 [debug] [MainThread]: Connection 'model.dbt_crypto.gold_klines_5m' was properly closed.
+[0m21:12:46.938138 [debug] [MainThread]: Connection 'model.dbt_crypto.bronze_realtime_klines' was properly closed.
+[0m21:12:46.938138 [debug] [MainThread]: Connection 'model.dbt_crypto.silver_klines_1m' was properly closed.
+[0m21:12:46.938138 [info ] [MainThread]: 
+[0m21:12:46.942704 [info ] [MainThread]: Finished running 1 incremental model, 1 table model, 2 view models in 0 hours 0 minutes and 4.37 seconds (4.37s).
+[0m21:12:46.943711 [debug] [MainThread]: Command end result
+[0m21:12:46.963076 [debug] [MainThread]: Wrote artifact WritableManifest to C:\StudyZone\Project\Binance\dbt_crypto\target\manifest.json
+[0m21:12:46.965628 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\StudyZone\Project\Binance\dbt_crypto\target\semantic_manifest.json
+[0m21:12:46.972667 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\StudyZone\Project\Binance\dbt_crypto\target\run_results.json
+[0m21:12:46.972667 [info ] [MainThread]: 
+[0m21:12:46.973664 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m21:12:46.974663 [info ] [MainThread]: 
+[0m21:12:46.974663 [info ] [MainThread]: Done. PASS=4 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=4
+[0m21:12:46.975664 [debug] [MainThread]: Command `dbt run` succeeded at 21:12:46.975664 after 8.36 seconds
+[0m21:12:46.976234 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002266D41D8D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002266E48BD60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002266C002110>]}
+[0m21:12:46.976983 [debug] [MainThread]: Flushing usage events
+[0m21:12:48.917240 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:13:03.641210 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001599DC8D8A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001599ECDF6A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001599ECDCBB0>]}
+
+
+============================== 21:13:03.645627 | fed01617-4442-43b0-8b92-a9b6e5f74ee6 ==============================
+[0m21:13:03.645627 [info ] [MainThread]: Running with dbt=1.11.6
+[0m21:13:03.646694 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\StudyZone\\Project\\Binance\\dbt_crypto', 'use_colors': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt test', 'use_experimental_parser': 'False', 'log_path': 'C:\\StudyZone\\Project\\Binance\\dbt_crypto\\logs'}
+[0m21:13:03.875488 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'fed01617-4442-43b0-8b92-a9b6e5f74ee6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001599ECDCA00>]}
+[0m21:13:03.962880 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'fed01617-4442-43b0-8b92-a9b6e5f74ee6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001599DD4E800>]}
+[0m21:13:03.964633 [info ] [MainThread]: Registered adapter: postgres=1.8.2
+[0m21:13:04.163018 [debug] [MainThread]: checksum: ec27062d18352e9cfca161c166fcc73d2201661a23a3cf3c89196a27f32cfcb8, vars: {}, profile: , target: , version: 1.11.6
+[0m21:13:04.335156 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m21:13:04.335156 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m21:13:04.336571 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m21:13:04.384054 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'fed01617-4442-43b0-8b92-a9b6e5f74ee6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000159A03D8130>]}
+[0m21:13:04.515017 [debug] [MainThread]: Wrote artifact WritableManifest to C:\StudyZone\Project\Binance\dbt_crypto\target\manifest.json
+[0m21:13:04.519166 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\StudyZone\Project\Binance\dbt_crypto\target\semantic_manifest.json
+[0m21:13:04.553736 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'fed01617-4442-43b0-8b92-a9b6e5f74ee6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000159A03CE770>]}
+[0m21:13:04.553736 [info ] [MainThread]: Found 4 models, 6 data tests, 2 sources, 462 macros
+[0m21:13:04.554741 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'fed01617-4442-43b0-8b92-a9b6e5f74ee6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000159A0407730>]}
+[0m21:13:04.556179 [info ] [MainThread]: 
+[0m21:13:04.557197 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m21:13:04.558197 [info ] [MainThread]: 
+[0m21:13:04.558590 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m21:13:04.563017 [debug] [ThreadPool]: Acquiring new postgres connection 'list_crypto_analytics_public_gold'
+[0m21:13:04.563017 [debug] [ThreadPool]: Acquiring new postgres connection 'list_crypto_analytics_public_silver'
+[0m21:13:04.563017 [debug] [ThreadPool]: Acquiring new postgres connection 'list_crypto_analytics_public_bronze'
+[0m21:13:04.632439 [debug] [ThreadPool]: Using postgres connection "list_crypto_analytics_public_gold"
+[0m21:13:04.632987 [debug] [ThreadPool]: Using postgres connection "list_crypto_analytics_public_silver"
+[0m21:13:04.632987 [debug] [ThreadPool]: Using postgres connection "list_crypto_analytics_public_bronze"
+[0m21:13:04.633549 [debug] [ThreadPool]: On list_crypto_analytics_public_gold: BEGIN
+[0m21:13:04.633549 [debug] [ThreadPool]: On list_crypto_analytics_public_silver: BEGIN
+[0m21:13:04.633549 [debug] [ThreadPool]: On list_crypto_analytics_public_bronze: BEGIN
+[0m21:13:04.633549 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:13:04.633549 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:13:04.633549 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:13:04.652367 [debug] [ThreadPool]: SQL status: BEGIN in 0.017 seconds
+[0m21:13:04.652367 [debug] [ThreadPool]: SQL status: BEGIN in 0.018 seconds
+[0m21:13:04.653446 [debug] [ThreadPool]: Using postgres connection "list_crypto_analytics_public_silver"
+[0m21:13:04.654014 [debug] [ThreadPool]: Using postgres connection "list_crypto_analytics_public_gold"
+[0m21:13:04.654525 [debug] [ThreadPool]: On list_crypto_analytics_public_silver: /* {"app": "dbt", "dbt_version": "1.11.6", "profile_name": "dbt_crypto", "target_name": "dev", "connection_name": "list_crypto_analytics_public_silver"} */
+select
+      'crypto_analytics' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_silver'
+    union all
+    select
+      'crypto_analytics' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_silver'
+    union all
+    select
+      'crypto_analytics' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_silver'
+  
+[0m21:13:04.655031 [debug] [ThreadPool]: On list_crypto_analytics_public_gold: /* {"app": "dbt", "dbt_version": "1.11.6", "profile_name": "dbt_crypto", "target_name": "dev", "connection_name": "list_crypto_analytics_public_gold"} */
+select
+      'crypto_analytics' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_gold'
+    union all
+    select
+      'crypto_analytics' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_gold'
+    union all
+    select
+      'crypto_analytics' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_gold'
+  
+[0m21:13:04.660369 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.004 seconds
+[0m21:13:04.661059 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.005 seconds
+[0m21:13:04.662736 [debug] [ThreadPool]: On list_crypto_analytics_public_gold: ROLLBACK
+[0m21:13:04.663864 [debug] [ThreadPool]: On list_crypto_analytics_public_silver: ROLLBACK
+[0m21:13:04.664948 [debug] [ThreadPool]: On list_crypto_analytics_public_gold: Close
+[0m21:13:04.665472 [debug] [ThreadPool]: On list_crypto_analytics_public_silver: Close
+[0m21:13:04.665994 [debug] [ThreadPool]: SQL status: BEGIN in 0.030 seconds
+[0m21:13:04.667559 [debug] [ThreadPool]: Using postgres connection "list_crypto_analytics_public_bronze"
+[0m21:13:04.668113 [debug] [ThreadPool]: On list_crypto_analytics_public_bronze: /* {"app": "dbt", "dbt_version": "1.11.6", "profile_name": "dbt_crypto", "target_name": "dev", "connection_name": "list_crypto_analytics_public_bronze"} */
+select
+      'crypto_analytics' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_bronze'
+    union all
+    select
+      'crypto_analytics' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_bronze'
+    union all
+    select
+      'crypto_analytics' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_bronze'
+  
+[0m21:13:04.672853 [debug] [ThreadPool]: SQL status: SELECT 2 in 0.004 seconds
+[0m21:13:04.674442 [debug] [ThreadPool]: On list_crypto_analytics_public_bronze: ROLLBACK
+[0m21:13:04.675499 [debug] [ThreadPool]: On list_crypto_analytics_public_bronze: Close
+[0m21:13:04.680463 [debug] [MainThread]: Using postgres connection "master"
+[0m21:13:04.681077 [debug] [MainThread]: On master: BEGIN
+[0m21:13:04.681077 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:13:04.718095 [debug] [MainThread]: SQL status: BEGIN in 0.036 seconds
+[0m21:13:04.718636 [debug] [MainThread]: Using postgres connection "master"
+[0m21:13:04.719210 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.11.6", "profile_name": "dbt_crypto", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m21:13:04.727216 [debug] [MainThread]: SQL status: SELECT 2 in 0.007 seconds
+[0m21:13:04.728732 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'fed01617-4442-43b0-8b92-a9b6e5f74ee6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001599F006080>]}
+[0m21:13:04.729770 [debug] [MainThread]: On master: ROLLBACK
+[0m21:13:04.731372 [debug] [MainThread]: Using postgres connection "master"
+[0m21:13:04.732432 [debug] [MainThread]: On master: BEGIN
+[0m21:13:04.734675 [debug] [MainThread]: SQL status: BEGIN in 0.002 seconds
+[0m21:13:04.735347 [debug] [MainThread]: On master: COMMIT
+[0m21:13:04.736437 [debug] [MainThread]: Using postgres connection "master"
+[0m21:13:04.737004 [debug] [MainThread]: On master: COMMIT
+[0m21:13:04.738119 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m21:13:04.738677 [debug] [MainThread]: On master: Close
+[0m21:13:04.743541 [debug] [Thread-1 (]: Began running node test.dbt_crypto.not_null_gold_klines_5m_bucket_5m.c375b769b7
+[0m21:13:04.744085 [debug] [Thread-2 (]: Began running node test.dbt_crypto.not_null_gold_klines_5m_symbol.ae0ee21dc4
+[0m21:13:04.744630 [debug] [Thread-3 (]: Began running node test.dbt_crypto.not_null_silver_klines_1m_close.c996922eeb
+[0m21:13:04.745178 [debug] [Thread-4 (]: Began running node test.dbt_crypto.not_null_silver_klines_1m_minute_ts.ed219ab3d0
+[0m21:13:04.745720 [info ] [Thread-1 (]: 1 of 6 START test not_null_gold_klines_5m_bucket_5m ............................ [RUN]
+[0m21:13:04.746796 [info ] [Thread-2 (]: 2 of 6 START test not_null_gold_klines_5m_symbol ............................... [RUN]
+[0m21:13:04.747331 [info ] [Thread-3 (]: 3 of 6 START test not_null_silver_klines_1m_close .............................. [RUN]
+[0m21:13:04.748417 [info ] [Thread-4 (]: 4 of 6 START test not_null_silver_klines_1m_minute_ts .......................... [RUN]
+[0m21:13:04.749476 [debug] [Thread-1 (]: Acquiring new postgres connection 'test.dbt_crypto.not_null_gold_klines_5m_bucket_5m.c375b769b7'
+[0m21:13:04.750171 [debug] [Thread-2 (]: Acquiring new postgres connection 'test.dbt_crypto.not_null_gold_klines_5m_symbol.ae0ee21dc4'
+[0m21:13:04.750691 [debug] [Thread-3 (]: Acquiring new postgres connection 'test.dbt_crypto.not_null_silver_klines_1m_close.c996922eeb'
+[0m21:13:04.751788 [debug] [Thread-4 (]: Acquiring new postgres connection 'test.dbt_crypto.not_null_silver_klines_1m_minute_ts.ed219ab3d0'
+[0m21:13:04.751788 [debug] [Thread-1 (]: Began compiling node test.dbt_crypto.not_null_gold_klines_5m_bucket_5m.c375b769b7
+[0m21:13:04.753266 [debug] [Thread-2 (]: Began compiling node test.dbt_crypto.not_null_gold_klines_5m_symbol.ae0ee21dc4
+[0m21:13:04.753847 [debug] [Thread-3 (]: Began compiling node test.dbt_crypto.not_null_silver_klines_1m_close.c996922eeb
+[0m21:13:04.754412 [debug] [Thread-4 (]: Began compiling node test.dbt_crypto.not_null_silver_klines_1m_minute_ts.ed219ab3d0
+[0m21:13:04.770067 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_crypto.not_null_gold_klines_5m_bucket_5m.c375b769b7"
+[0m21:13:04.775007 [debug] [Thread-2 (]: Writing injected SQL for node "test.dbt_crypto.not_null_gold_klines_5m_symbol.ae0ee21dc4"
+[0m21:13:04.779710 [debug] [Thread-3 (]: Writing injected SQL for node "test.dbt_crypto.not_null_silver_klines_1m_close.c996922eeb"
+[0m21:13:04.787009 [debug] [Thread-4 (]: Writing injected SQL for node "test.dbt_crypto.not_null_silver_klines_1m_minute_ts.ed219ab3d0"
+[0m21:13:04.789894 [debug] [Thread-1 (]: Began executing node test.dbt_crypto.not_null_gold_klines_5m_bucket_5m.c375b769b7
+[0m21:13:04.811053 [debug] [Thread-2 (]: Began executing node test.dbt_crypto.not_null_gold_klines_5m_symbol.ae0ee21dc4
+[0m21:13:04.813495 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_crypto.not_null_gold_klines_5m_bucket_5m.c375b769b7"
+[0m21:13:04.817303 [debug] [Thread-2 (]: Writing runtime sql for node "test.dbt_crypto.not_null_gold_klines_5m_symbol.ae0ee21dc4"
+[0m21:13:04.817859 [debug] [Thread-4 (]: Began executing node test.dbt_crypto.not_null_silver_klines_1m_minute_ts.ed219ab3d0
+[0m21:13:04.818446 [debug] [Thread-3 (]: Began executing node test.dbt_crypto.not_null_silver_klines_1m_close.c996922eeb
+[0m21:13:04.822916 [debug] [Thread-4 (]: Writing runtime sql for node "test.dbt_crypto.not_null_silver_klines_1m_minute_ts.ed219ab3d0"
+[0m21:13:04.826852 [debug] [Thread-3 (]: Writing runtime sql for node "test.dbt_crypto.not_null_silver_klines_1m_close.c996922eeb"
+[0m21:13:04.827402 [debug] [Thread-2 (]: Using postgres connection "test.dbt_crypto.not_null_gold_klines_5m_symbol.ae0ee21dc4"
+[0m21:13:04.828474 [debug] [Thread-1 (]: Using postgres connection "test.dbt_crypto.not_null_gold_klines_5m_bucket_5m.c375b769b7"
+[0m21:13:04.829530 [debug] [Thread-2 (]: On test.dbt_crypto.not_null_gold_klines_5m_symbol.ae0ee21dc4: BEGIN
+[0m21:13:04.830699 [debug] [Thread-1 (]: On test.dbt_crypto.not_null_gold_klines_5m_bucket_5m.c375b769b7: BEGIN
+[0m21:13:04.831256 [debug] [Thread-4 (]: Using postgres connection "test.dbt_crypto.not_null_silver_klines_1m_minute_ts.ed219ab3d0"
+[0m21:13:04.831803 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m21:13:04.832886 [debug] [Thread-3 (]: Using postgres connection "test.dbt_crypto.not_null_silver_klines_1m_close.c996922eeb"
+[0m21:13:04.833448 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m21:13:04.834027 [debug] [Thread-4 (]: On test.dbt_crypto.not_null_silver_klines_1m_minute_ts.ed219ab3d0: BEGIN
+[0m21:13:04.834586 [debug] [Thread-3 (]: On test.dbt_crypto.not_null_silver_klines_1m_close.c996922eeb: BEGIN
+[0m21:13:04.835594 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m21:13:04.836597 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m21:13:04.850908 [debug] [Thread-2 (]: SQL status: BEGIN in 0.019 seconds
+[0m21:13:04.851465 [debug] [Thread-2 (]: Using postgres connection "test.dbt_crypto.not_null_gold_klines_5m_symbol.ae0ee21dc4"
+[0m21:13:04.852601 [debug] [Thread-2 (]: On test.dbt_crypto.not_null_gold_klines_5m_symbol.ae0ee21dc4: /* {"app": "dbt", "dbt_version": "1.11.6", "profile_name": "dbt_crypto", "target_name": "dev", "node_id": "test.dbt_crypto.not_null_gold_klines_5m_symbol.ae0ee21dc4"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select symbol
+from "crypto_analytics"."public_gold"."gold_klines_5m"
+where symbol is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m21:13:04.854787 [debug] [Thread-4 (]: SQL status: BEGIN in 0.019 seconds
+[0m21:13:04.855867 [debug] [Thread-3 (]: SQL status: BEGIN in 0.019 seconds
+[0m21:13:04.856405 [debug] [Thread-4 (]: Using postgres connection "test.dbt_crypto.not_null_silver_klines_1m_minute_ts.ed219ab3d0"
+[0m21:13:04.857463 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.004 seconds
+[0m21:13:04.858536 [debug] [Thread-3 (]: Using postgres connection "test.dbt_crypto.not_null_silver_klines_1m_close.c996922eeb"
+[0m21:13:04.859070 [debug] [Thread-4 (]: On test.dbt_crypto.not_null_silver_klines_1m_minute_ts.ed219ab3d0: /* {"app": "dbt", "dbt_version": "1.11.6", "profile_name": "dbt_crypto", "target_name": "dev", "node_id": "test.dbt_crypto.not_null_silver_klines_1m_minute_ts.ed219ab3d0"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select minute_ts
+from "crypto_analytics"."public_silver"."silver_klines_1m"
+where minute_ts is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m21:13:04.864431 [debug] [Thread-2 (]: On test.dbt_crypto.not_null_gold_klines_5m_symbol.ae0ee21dc4: ROLLBACK
+[0m21:13:04.865510 [debug] [Thread-3 (]: On test.dbt_crypto.not_null_silver_klines_1m_close.c996922eeb: /* {"app": "dbt", "dbt_version": "1.11.6", "profile_name": "dbt_crypto", "target_name": "dev", "node_id": "test.dbt_crypto.not_null_silver_klines_1m_close.c996922eeb"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select close
+from "crypto_analytics"."public_silver"."silver_klines_1m"
+where close is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m21:13:04.867126 [debug] [Thread-2 (]: On test.dbt_crypto.not_null_gold_klines_5m_symbol.ae0ee21dc4: Close
+[0m21:13:04.867678 [debug] [Thread-1 (]: SQL status: BEGIN in 0.034 seconds
+[0m21:13:04.870067 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.004 seconds
+[0m21:13:04.870067 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.004 seconds
+[0m21:13:04.869472 [info ] [Thread-2 (]: 2 of 6 PASS not_null_gold_klines_5m_symbol ..................................... [[32mPASS[0m in 0.12s]
+[0m21:13:04.871075 [debug] [Thread-1 (]: Using postgres connection "test.dbt_crypto.not_null_gold_klines_5m_bucket_5m.c375b769b7"
+[0m21:13:04.873263 [debug] [Thread-4 (]: On test.dbt_crypto.not_null_silver_klines_1m_minute_ts.ed219ab3d0: ROLLBACK
+[0m21:13:04.874271 [debug] [Thread-3 (]: On test.dbt_crypto.not_null_silver_klines_1m_close.c996922eeb: ROLLBACK
+[0m21:13:04.876344 [debug] [Thread-2 (]: Finished running node test.dbt_crypto.not_null_gold_klines_5m_symbol.ae0ee21dc4
+[0m21:13:04.876878 [debug] [Thread-1 (]: On test.dbt_crypto.not_null_gold_klines_5m_bucket_5m.c375b769b7: /* {"app": "dbt", "dbt_version": "1.11.6", "profile_name": "dbt_crypto", "target_name": "dev", "node_id": "test.dbt_crypto.not_null_gold_klines_5m_bucket_5m.c375b769b7"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select bucket_5m
+from "crypto_analytics"."public_gold"."gold_klines_5m"
+where bucket_5m is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m21:13:04.878364 [debug] [Thread-2 (]: Began running node test.dbt_crypto.not_null_silver_klines_1m_open.8b6c169a5b
+[0m21:13:04.878894 [debug] [Thread-3 (]: On test.dbt_crypto.not_null_silver_klines_1m_close.c996922eeb: Close
+[0m21:13:04.879449 [debug] [Thread-4 (]: On test.dbt_crypto.not_null_silver_klines_1m_minute_ts.ed219ab3d0: Close
+[0m21:13:04.879993 [info ] [Thread-2 (]: 5 of 6 START test not_null_silver_klines_1m_open ............................... [RUN]
+[0m21:13:04.881064 [info ] [Thread-3 (]: 3 of 6 PASS not_null_silver_klines_1m_close .................................... [[32mPASS[0m in 0.13s]
+[0m21:13:04.882239 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.002 seconds
+[0m21:13:04.882790 [info ] [Thread-4 (]: 4 of 6 PASS not_null_silver_klines_1m_minute_ts ................................ [[32mPASS[0m in 0.13s]
+[0m21:13:04.884038 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.dbt_crypto.not_null_gold_klines_5m_symbol.ae0ee21dc4, now test.dbt_crypto.not_null_silver_klines_1m_open.8b6c169a5b)
+[0m21:13:04.884997 [debug] [Thread-3 (]: Finished running node test.dbt_crypto.not_null_silver_klines_1m_close.c996922eeb
+[0m21:13:04.886615 [debug] [Thread-1 (]: On test.dbt_crypto.not_null_gold_klines_5m_bucket_5m.c375b769b7: ROLLBACK
+[0m21:13:04.887683 [debug] [Thread-4 (]: Finished running node test.dbt_crypto.not_null_silver_klines_1m_minute_ts.ed219ab3d0
+[0m21:13:04.888222 [debug] [Thread-2 (]: Began compiling node test.dbt_crypto.not_null_silver_klines_1m_open.8b6c169a5b
+[0m21:13:04.888773 [debug] [Thread-3 (]: Began running node test.dbt_crypto.not_null_silver_klines_1m_symbol.4fc87351ca
+[0m21:13:04.894094 [debug] [Thread-2 (]: Writing injected SQL for node "test.dbt_crypto.not_null_silver_klines_1m_open.8b6c169a5b"
+[0m21:13:04.894094 [debug] [Thread-1 (]: On test.dbt_crypto.not_null_gold_klines_5m_bucket_5m.c375b769b7: Close
+[0m21:13:04.896326 [info ] [Thread-3 (]: 6 of 6 START test not_null_silver_klines_1m_symbol ............................. [RUN]
+[0m21:13:04.897924 [info ] [Thread-1 (]: 1 of 6 PASS not_null_gold_klines_5m_bucket_5m .................................. [[32mPASS[0m in 0.15s]
+[0m21:13:04.899320 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.dbt_crypto.not_null_silver_klines_1m_close.c996922eeb, now test.dbt_crypto.not_null_silver_klines_1m_symbol.4fc87351ca)
+[0m21:13:04.899931 [debug] [Thread-2 (]: Began executing node test.dbt_crypto.not_null_silver_klines_1m_open.8b6c169a5b
+[0m21:13:04.901021 [debug] [Thread-1 (]: Finished running node test.dbt_crypto.not_null_gold_klines_5m_bucket_5m.c375b769b7
+[0m21:13:04.901704 [debug] [Thread-3 (]: Began compiling node test.dbt_crypto.not_null_silver_klines_1m_symbol.4fc87351ca
+[0m21:13:04.904423 [debug] [Thread-2 (]: Writing runtime sql for node "test.dbt_crypto.not_null_silver_klines_1m_open.8b6c169a5b"
+[0m21:13:04.910211 [debug] [Thread-3 (]: Writing injected SQL for node "test.dbt_crypto.not_null_silver_klines_1m_symbol.4fc87351ca"
+[0m21:13:04.912226 [debug] [Thread-2 (]: Using postgres connection "test.dbt_crypto.not_null_silver_klines_1m_open.8b6c169a5b"
+[0m21:13:04.912921 [debug] [Thread-3 (]: Began executing node test.dbt_crypto.not_null_silver_klines_1m_symbol.4fc87351ca
+[0m21:13:04.915872 [debug] [Thread-2 (]: On test.dbt_crypto.not_null_silver_klines_1m_open.8b6c169a5b: BEGIN
+[0m21:13:04.920897 [debug] [Thread-3 (]: Writing runtime sql for node "test.dbt_crypto.not_null_silver_klines_1m_symbol.4fc87351ca"
+[0m21:13:04.920897 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m21:13:04.923743 [debug] [Thread-3 (]: Using postgres connection "test.dbt_crypto.not_null_silver_klines_1m_symbol.4fc87351ca"
+[0m21:13:04.923743 [debug] [Thread-3 (]: On test.dbt_crypto.not_null_silver_klines_1m_symbol.4fc87351ca: BEGIN
+[0m21:13:04.924851 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m21:13:04.941819 [debug] [Thread-2 (]: SQL status: BEGIN in 0.020 seconds
+[0m21:13:04.942896 [debug] [Thread-2 (]: Using postgres connection "test.dbt_crypto.not_null_silver_klines_1m_open.8b6c169a5b"
+[0m21:13:04.943431 [debug] [Thread-2 (]: On test.dbt_crypto.not_null_silver_klines_1m_open.8b6c169a5b: /* {"app": "dbt", "dbt_version": "1.11.6", "profile_name": "dbt_crypto", "target_name": "dev", "node_id": "test.dbt_crypto.not_null_silver_klines_1m_open.8b6c169a5b"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select open
+from "crypto_analytics"."public_silver"."silver_klines_1m"
+where open is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m21:13:04.945768 [debug] [Thread-3 (]: SQL status: BEGIN in 0.021 seconds
+[0m21:13:04.946312 [debug] [Thread-3 (]: Using postgres connection "test.dbt_crypto.not_null_silver_klines_1m_symbol.4fc87351ca"
+[0m21:13:04.946856 [debug] [Thread-3 (]: On test.dbt_crypto.not_null_silver_klines_1m_symbol.4fc87351ca: /* {"app": "dbt", "dbt_version": "1.11.6", "profile_name": "dbt_crypto", "target_name": "dev", "node_id": "test.dbt_crypto.not_null_silver_klines_1m_symbol.4fc87351ca"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select symbol
+from "crypto_analytics"."public_silver"."silver_klines_1m"
+where symbol is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m21:13:04.948094 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.003 seconds
+[0m21:13:04.948094 [debug] [Thread-2 (]: On test.dbt_crypto.not_null_silver_klines_1m_open.8b6c169a5b: ROLLBACK
+[0m21:13:04.951213 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.003 seconds
+[0m21:13:04.951213 [debug] [Thread-2 (]: On test.dbt_crypto.not_null_silver_klines_1m_open.8b6c169a5b: Close
+[0m21:13:04.952741 [debug] [Thread-3 (]: On test.dbt_crypto.not_null_silver_klines_1m_symbol.4fc87351ca: ROLLBACK
+[0m21:13:04.954777 [info ] [Thread-2 (]: 5 of 6 PASS not_null_silver_klines_1m_open ..................................... [[32mPASS[0m in 0.07s]
+[0m21:13:04.955369 [debug] [Thread-2 (]: Finished running node test.dbt_crypto.not_null_silver_klines_1m_open.8b6c169a5b
+[0m21:13:04.955369 [debug] [Thread-3 (]: On test.dbt_crypto.not_null_silver_klines_1m_symbol.4fc87351ca: Close
+[0m21:13:04.955369 [info ] [Thread-3 (]: 6 of 6 PASS not_null_silver_klines_1m_symbol ................................... [[32mPASS[0m in 0.06s]
+[0m21:13:04.958608 [debug] [Thread-3 (]: Finished running node test.dbt_crypto.not_null_silver_klines_1m_symbol.4fc87351ca
+[0m21:13:04.960118 [debug] [MainThread]: Using postgres connection "master"
+[0m21:13:04.960118 [debug] [MainThread]: On master: BEGIN
+[0m21:13:04.960118 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m21:13:04.973362 [debug] [MainThread]: SQL status: BEGIN in 0.012 seconds
+[0m21:13:04.973362 [debug] [MainThread]: On master: COMMIT
+[0m21:13:04.974362 [debug] [MainThread]: Using postgres connection "master"
+[0m21:13:04.974362 [debug] [MainThread]: On master: COMMIT
+[0m21:13:04.975879 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m21:13:04.976430 [debug] [MainThread]: On master: Close
+[0m21:13:04.976853 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:13:04.976853 [debug] [MainThread]: Connection 'list_crypto_analytics_public_gold' was properly closed.
+[0m21:13:04.977899 [debug] [MainThread]: Connection 'list_crypto_analytics_public_silver' was properly closed.
+[0m21:13:04.977899 [debug] [MainThread]: Connection 'list_crypto_analytics_public_bronze' was properly closed.
+[0m21:13:04.978905 [debug] [MainThread]: Connection 'test.dbt_crypto.not_null_gold_klines_5m_bucket_5m.c375b769b7' was properly closed.
+[0m21:13:04.978905 [debug] [MainThread]: Connection 'test.dbt_crypto.not_null_silver_klines_1m_open.8b6c169a5b' was properly closed.
+[0m21:13:04.978905 [debug] [MainThread]: Connection 'test.dbt_crypto.not_null_silver_klines_1m_symbol.4fc87351ca' was properly closed.
+[0m21:13:04.978905 [debug] [MainThread]: Connection 'test.dbt_crypto.not_null_silver_klines_1m_minute_ts.ed219ab3d0' was properly closed.
+[0m21:13:04.980113 [info ] [MainThread]: 
+[0m21:13:04.980420 [info ] [MainThread]: Finished running 6 data tests in 0 hours 0 minutes and 0.42 seconds (0.42s).
+[0m21:13:04.982205 [debug] [MainThread]: Command end result
+[0m21:13:05.003076 [debug] [MainThread]: Wrote artifact WritableManifest to C:\StudyZone\Project\Binance\dbt_crypto\target\manifest.json
+[0m21:13:05.006547 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\StudyZone\Project\Binance\dbt_crypto\target\semantic_manifest.json
+[0m21:13:05.014745 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\StudyZone\Project\Binance\dbt_crypto\target\run_results.json
+[0m21:13:05.015304 [info ] [MainThread]: 
+[0m21:13:05.015878 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m21:13:05.016459 [info ] [MainThread]: 
+[0m21:13:05.017080 [info ] [MainThread]: Done. PASS=6 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=6
+[0m21:13:05.018171 [debug] [MainThread]: Command `dbt test` succeeded at 21:13:05.018171 after 1.47 seconds
+[0m21:13:05.018739 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001599DC8D8A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001599DD46A40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000159A03CE7D0>]}
+[0m21:13:05.019305 [debug] [MainThread]: Flushing usage events
+[0m21:13:06.516378 [debug] [MainThread]: An error was encountered while trying to flush usage events

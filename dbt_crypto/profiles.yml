@@ -1,0 +1,23 @@
+dbt_crypto:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: "{{ env_var('POSTGRES_HOST', 'localhost') }}"
+      user: "{{ env_var('POSTGRES_USER', 'postgres') }}"
+      password: "{{ env_var('POSTGRES_PASSWORD', 'postgres') }}"
+      port: 5432
+      dbname: "{{ env_var('POSTGRES_ANALYTICS_DB', 'crypto_analytics') }}"
+      schema: public # Base schema, models will use bronze/silver/gold
+      threads: 4
+      keepalives_idle: 0
+    prod:
+      type: postgres
+      host: "{{ env_var('POSTGRES_HOST', 'postgres') }}"
+      user: "{{ env_var('POSTGRES_USER', 'postgres') }}"
+      password: "{{ env_var('POSTGRES_PASSWORD', 'postgres') }}"
+      port: 5432
+      dbname: "{{ env_var('POSTGRES_ANALYTICS_DB', 'crypto_analytics') }}"
+      schema: public
+      threads: 4
+      keepalives_idle: 0

@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: crypto_raw
+    schema: public
+    tables:
+      - name: raw_klines
+        description: "Historical 1-minute OHLCV candles natively ingested from Binance REST API."
+      - name: fact_realtime_trades_1m
+        description: "Real-time 1-minute OHLCV candles aggregated from the raw trade stream."

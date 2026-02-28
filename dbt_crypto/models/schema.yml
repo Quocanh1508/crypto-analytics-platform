@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: silver_klines_1m
+    description: "Unified and deduplicated 1-minute OHLCV candles from both REST and WebSocket sources."
+    columns:
+      - name: symbol
+        description: "Trading pair ticker (e.g. BTCUSDT)"
+        tests:
+          - not_null
+      - name: minute_ts
+        description: "The timestamp of the 1-minute candle"
+        tests:
+          - not_null
+      - name: open
+        tests:
+          - not_null
+      - name: close
+        tests:
+          - not_null
+
+  - name: gold_klines_5m
+    description: "Rolled-up 5-minute OHLCV candles calculated from the silver 1m timeline."
+    columns:
+      - name: symbol
+        tests:
+          - not_null
+      - name: bucket_5m
+        tests:
+          - not_null
