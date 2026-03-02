@@ -26,6 +26,10 @@ FEATURE_FLAGS = {
     "ENABLE_TEMPLATE_PROCESSING": True,
     "DASHBOARD_NATIVE_FILTERS": True,
     "DASHBOARD_CROSS_FILTERS": True,
+    # Enable all ECharts-based chart types (Candlestick, Mixed Timeseries, etc.)
+    "CHARTJS_ENABLED": True,
+    "EMBEDDED_SUPERSET": True,
+    "ENABLE_ECHARTS_TIMESERIES": True,
 }
 
 # Row limit for charts
