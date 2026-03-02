@@ -1,4 +1,4 @@
-# 🚀 Real-Time Crypto Analytics Platform
+#  Real-Time Crypto Analytics Platform
 
 > An end-to-end, production-grade streaming data engineering platform that ingests live cryptocurrency trade data from **Binance**, processes it through a **Medallion Architecture**, and visualizes it with interactive dashboards — all running locally inside Docker.
 
