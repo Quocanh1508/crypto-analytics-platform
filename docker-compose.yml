@@ -111,6 +111,40 @@ services:
       - streaming
 
   # ---------------------------------------------------------------------------
+  # Apache Spark (Structured Streaming)
+  # ---------------------------------------------------------------------------
+  spark-master:
+    build:
+      context: ./spark
+    container_name: crypto-spark
+    env_file: .env
+    environment:
+      RUNNING_IN_DOCKER: "true"
+    command: >
+      /opt/spark/bin/spark-submit
+      --master local[*]
+      --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.4,org.apache.hadoop:hadoop-aws:3.3.4,com.amazonaws:aws-java-sdk-bundle:1.12.262
+      /app/spark/stream_job.py
+    ports:
+      - "4040:4040" # Spark Application WebUI
+    depends_on:
+      kafka:
+        condition: service_healthy
+      postgres:
+        condition: service_healthy
+      minio:
+        condition: service_healthy
+    volumes:
+      - ./spark:/app/spark
+    networks:
+      - crypto-net
+    mem_limit: 1.5g
+    mem_reservation: 512m
+    restart: on-failure:3
+    profiles:
+      - spark-streaming
+
+  # ---------------------------------------------------------------------------
   # Python Consumer (Kafka -> Postgres/MinIO)
   # ---------------------------------------------------------------------------
   binance-consumer:

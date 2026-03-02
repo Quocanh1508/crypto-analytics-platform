@@ -16,7 +16,7 @@
     
 
     merge into "crypto_analytics"."public_silver"."silver_klines_1m" as DBT_INTERNAL_DEST
-        using "silver_klines_1m__dbt_tmp170024591199" as DBT_INTERNAL_SOURCE
+        using "silver_klines_1m__dbt_tmp170509578550" as DBT_INTERNAL_SOURCE
         on (
                     DBT_INTERNAL_SOURCE.symbol = DBT_INTERNAL_DEST.symbol
                 ) and (
